@@ -89,6 +89,7 @@
 
 		case SBJsonStreamParserAdapterObject:
 			NSParameterAssert(keyStack.count);
+            if(![obj isKindOfClass:[NSNull class]])
 			[dict setObject:obj forKey:[keyStack lastObject]];
 			[keyStack removeLastObject];
 			break;
